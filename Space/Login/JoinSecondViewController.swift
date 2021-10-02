@@ -1,13 +1,13 @@
 //
-//  LoginViewController.swift
+//  JoinSecondViewController.swift
 //  Space
 //
-//  Created by lina on 2021/10/02.
+//  Created by lina on 2021/10/03.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class JoinSecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
