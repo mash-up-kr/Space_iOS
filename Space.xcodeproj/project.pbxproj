@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E0E4AA8270843D30020F616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AA7270843D30020F616 /* AppDelegate.swift */; };
 		3E0E4AAA270843D30020F616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AA9270843D30020F616 /* SceneDelegate.swift */; };
-		3E0E4AAC270843D30020F616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AAB270843D30020F616 /* ViewController.swift */; };
 		3E0E4AAF270843D30020F616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E4AAD270843D30020F616 /* Main.storyboard */; };
 		3E0E4AB1270843D40020F616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E4AB0270843D40020F616 /* Assets.xcassets */; };
 		3E0E4AB4270843D40020F616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E4AB2270843D40020F616 /* LaunchScreen.storyboard */; };
@@ -21,13 +20,20 @@
 		3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AC527084FA20020F616 /* DateFormatter.swift */; };
 		3E0E4ACD27084FAA0020F616 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ACC27084FAA0020F616 /* Reusable.swift */; };
 		3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD0270856630020F616 /* SplashViewController.swift */; };
+		FFE19B3427086FBE000C2B9A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */; };
+		FFE19B3627086FCC000C2B9A /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */; };
+		FFE19B3927087013000C2B9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3827087013000C2B9A /* HomeViewController.swift */; };
+		FFE19B3B27087028000C2B9A /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B3A27087028000C2B9A /* HomeViewController.storyboard */; };
+		FFE19B3F270870D0000C2B9A /* -----View----- in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B3E270870D0000C2B9A /* -----View----- */; };
+		FFE19B41270870F7000C2B9A /* -----Others----- in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B40270870F7000C2B9A /* -----Others----- */; };
+		FFE19B432708711B000C2B9A /* -----App----- in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B422708711B000C2B9A /* -----App----- */; };
+		FFE19B4527087133000C2B9A /* -----Helper----- in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B4427087133000C2B9A /* -----Helper----- */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E0E4AA4270843D30020F616 /* Space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Space.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0E4AA7270843D30020F616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E0E4AA9270843D30020F616 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3E0E4AAB270843D30020F616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E0E4AAE270843D30020F616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E0E4AB0270843D40020F616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E0E4AB3270843D40020F616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +46,14 @@
 		3E0E4AC527084FA20020F616 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3E0E4ACC27084FAA0020F616 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3E0E4AD0270856630020F616 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
+		FFE19B3827087013000C2B9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FFE19B3A27087028000C2B9A /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		FFE19B3E270870D0000C2B9A /* -----View----- */ = {isa = PBXFileReference; lastKnownFileType = text; path = "-----View-----"; sourceTree = "<group>"; };
+		FFE19B40270870F7000C2B9A /* -----Others----- */ = {isa = PBXFileReference; lastKnownFileType = text; path = "-----Others-----"; sourceTree = "<group>"; };
+		FFE19B422708711B000C2B9A /* -----App----- */ = {isa = PBXFileReference; lastKnownFileType = text; path = "-----App-----"; sourceTree = "<group>"; };
+		FFE19B4427087133000C2B9A /* -----Helper----- */ = {isa = PBXFileReference; lastKnownFileType = text; path = "-----Helper-----"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +86,18 @@
 		3E0E4AA6270843D30020F616 /* Space */ = {
 			isa = PBXGroup;
 			children = (
+				FFE19B422708711B000C2B9A /* -----App----- */,
+				FFE19B3D2708705B000C2B9A /* App */,
+				FFE19B3227086FA8000C2B9A /* SupportingFiles */,
+				FFE19B3E270870D0000C2B9A /* -----View----- */,
 				3E0E4AD2270856AE0020F616 /* Splash */,
+				FFE19B3727086FCF000C2B9A /* Main */,
+				FFE19B3C27087039000C2B9A /* Home */,
+				FFE19B40270870F7000C2B9A /* -----Others----- */,
 				3E0E4ABD27084F980020F616 /* Network */,
+				FFE19B4427087133000C2B9A /* -----Helper----- */,
 				3E0E4AC027084FA20020F616 /* Extension */,
 				3E0E4ACB27084FAA0020F616 /* Protocol */,
-				3E0E4AA7270843D30020F616 /* AppDelegate.swift */,
-				3E0E4AA9270843D30020F616 /* SceneDelegate.swift */,
-				3E0E4AAB270843D30020F616 /* ViewController.swift */,
-				3E0E4AAD270843D30020F616 /* Main.storyboard */,
-				3E0E4AB0270843D40020F616 /* Assets.xcassets */,
-				3E0E4AB5270843D40020F616 /* Info.plist */,
 			);
 			path = Space;
 			sourceTree = "<group>";
@@ -121,6 +137,44 @@
 				3E0E4AD0270856630020F616 /* SplashViewController.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		FFE19B3227086FA8000C2B9A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E4AB0270843D40020F616 /* Assets.xcassets */,
+				3E0E4AB5270843D40020F616 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FFE19B3727086FCF000C2B9A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */,
+				FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FFE19B3C27087039000C2B9A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FFE19B3A27087028000C2B9A /* HomeViewController.storyboard */,
+				FFE19B3827087013000C2B9A /* HomeViewController.swift */,
+			);
+			name = Home;
+			path = Main/Home;
+			sourceTree = "<group>";
+		};
+		FFE19B3D2708705B000C2B9A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E4AA7270843D30020F616 /* AppDelegate.swift */,
+				3E0E4AA9270843D30020F616 /* SceneDelegate.swift */,
+				3E0E4AAD270843D30020F616 /* Main.storyboard */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +234,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE19B432708711B000C2B9A /* -----App----- in Resources */,
+				FFE19B3B27087028000C2B9A /* HomeViewController.storyboard in Resources */,
 				3E0E4AB4270843D40020F616 /* LaunchScreen.storyboard in Resources */,
+				FFE19B41270870F7000C2B9A /* -----Others----- in Resources */,
 				3E0E4AB1270843D40020F616 /* Assets.xcassets in Resources */,
+				FFE19B3F270870D0000C2B9A /* -----View----- in Resources */,
 				3E0E4AAF270843D30020F616 /* Main.storyboard in Resources */,
+				FFE19B4527087133000C2B9A /* -----Helper----- in Resources */,
+				FFE19B3627086FCC000C2B9A /* MainTabBarController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */,
-				3E0E4AAC270843D30020F616 /* ViewController.swift in Sources */,
+				FFE19B3427086FBE000C2B9A /* MainTabBarController.swift in Sources */,
 				3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */,
 				3E0E4AA8270843D30020F616 /* AppDelegate.swift in Sources */,
 				3E0E4AC827084FA20020F616 /* UICollectionView.swift in Sources */,
@@ -203,6 +263,7 @@
 				3E0E4AC727084FA20020F616 /* Array.swift in Sources */,
 				3E0E4AC927084FA20020F616 /* UITableView.swift in Sources */,
 				3E0E4AAA270843D30020F616 /* SceneDelegate.swift in Sources */,
+				FFE19B3927087013000C2B9A /* HomeViewController.swift in Sources */,
 				3E0E4AC627084FA20020F616 /* URLRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Space/Info.plist;
+				INFOPLIST_FILE = Space/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Space/Info.plist;
+				INFOPLIST_FILE = Space/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
