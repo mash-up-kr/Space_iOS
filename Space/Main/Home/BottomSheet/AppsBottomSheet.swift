@@ -34,6 +34,15 @@ final class AppsBottomSheet: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        defer {
+            if let window = view.window {
+                window.addSubview(bottomSheetBackButton)
+                bottomSheetBackButton.translatesAutoresizingMaskIntoConstraints = false
+                bottomSheetBackButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+                bottomSheetBackButton.bottomAnchor.constraint(equalTo: view.topAnchor, constant: -28).isActive = true
+            }
+        }
+
         guard isViewDidAppear == false else { return }
         isViewDidAppear = true
         onPanModalWillPresent?()
@@ -41,18 +50,18 @@ final class AppsBottomSheet: UIViewController {
         bottomSheetBackButton.setImage(UIImage(named: "btn_back_left_12px"), for: .normal)
         bottomSheetBackButton.setTitle("홈으로", for: .normal)
         bottomSheetBackButton.addTarget(self, action: #selector(actionDidTapBottomSheetBackButton), for: .touchUpInside)
-        if let window = view.window {
-            window.addSubview(bottomSheetBackButton)
-            bottomSheetBackButton.translatesAutoresizingMaskIntoConstraints = false
-            bottomSheetBackButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-            bottomSheetBackButton.bottomAnchor.constraint(equalTo: view.topAnchor, constant: -34).isActive = true
-        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        bottomSheetBackButton.removeFromSuperview()
     }
 
     @IBOutlet weak var testButton: UIButton!
 
     private func setupView() {
-        titleLabel.text = "나의 화이트홀"
+        titleLabel.text = title
 
         collectionView.setCollectionViewLayout(shortFormLayout(), animated: false)
         collectionView.dataSource = self
@@ -68,7 +77,7 @@ extension AppsBottomSheet {
     @objc func actionDidTapBottomSheetBackButton() {
         dismiss(animated: true, completion: nil)
     }
-    private func showBottomSheetBackButton(above bottomView: UIView) {
+    private func showBottomSheetBackButton() {
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.4,
                                                        delay: 0,
                                                        options: .curveEaseOut) {
@@ -181,6 +190,12 @@ extension AppsBottomSheet: PanModalPresentable {
 
     func willTransition(to state: PanModalPresentationController.PresentationState) {
         guard self.formStyle != state else { return }
+        switch state {
+        case .shortForm:
+            showBottomSheetBackButton()
+        case .longForm:
+            hideBottomSheetBackButton()
+        }
         onPanModalWillTransition?(state)
         formStyle = state
         collectionView.reloadData()
@@ -189,5 +204,13 @@ extension AppsBottomSheet: PanModalPresentable {
 
     func panModalWillDismiss() {
         onPanModalWillDismiss?()
+    }
+}
+
+extension AppsBottomSheet {
+    static func storyboardInstance(title: String) -> AppsBottomSheet {
+        let bottomSheet = AppsBottomSheet.storyboardInstance()
+        bottomSheet.title = title
+        return bottomSheet
     }
 }

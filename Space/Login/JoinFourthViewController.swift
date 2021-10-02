@@ -40,4 +40,9 @@ final class JoinFourthViewController: UIViewController {
     @IBAction private func cancelButton(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
+
+    @IBAction func touchUpNextButton(_ sender: Any) {
+        let mainTabBarController = MainTabBarController.storyboardInstance()
+        self.view.window?.rootViewController = mainTabBarController
+    }
 }

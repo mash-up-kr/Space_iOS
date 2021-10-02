@@ -51,6 +51,8 @@ class HomeViewController: UIViewController {
     private func setupView() {
         scrollView.setContentOffset(CGPoint(x: scrollView.contentSize.width/2, y: 0), animated: false)
 
+        myPlanetButton.transform = CGAffineTransform(rotationAngle: .pi / 4)
+
         whitehallButton.addTarget(self, action: #selector(actionDidTapWhitehall), for: .touchUpInside)
         blackhallButton.addTarget(self, action: #selector(actionDidTapBlackhall), for: .touchUpInside)
     }
@@ -102,7 +104,7 @@ extension HomeViewController {
         whitehallAnimation.addCompletion { [weak self] position in
             guard let self = self else { return }
             guard position == .end else { return }
-            let appsBottomSheet = AppsBottomSheet.storyboardInstance()
+            let appsBottomSheet = AppsBottomSheet.storyboardInstance(title: "나의 화이트홀")
             appsBottomSheet.onPanModalWillDismiss = { [weak self] in
                 self?.viewModel.action.send(.didTapBackButton)
             }
@@ -116,7 +118,7 @@ extension HomeViewController {
         blackhallAnimation.addCompletion { [weak self] position in
             guard let self = self else { return }
             guard position == .end else { return }
-            let appsBottomSheet = AppsBottomSheet.storyboardInstance()
+            let appsBottomSheet = AppsBottomSheet.storyboardInstance(title: "나의 블랙홀")
             appsBottomSheet.onPanModalWillDismiss = { [weak self] in
                 self?.viewModel.action.send(.didTapBackButton)
             }
@@ -146,7 +148,7 @@ extension HomeViewController {
             let diffY = self.view.center.y - self.blackhallButton.frame.midY
             self.backgroundImageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             self.whitehallButton.transform = CGAffineTransform(translationX: diffX * 2, y: diffY * 2).scaledBy(x: 2, y: 2)
-            self.myPlanetButton.transform = CGAffineTransform(translationX: diffX * 2, y: diffY * 2).scaledBy(x: 2, y: 2)
+            self.myPlanetButton.transform = CGAffineTransform(translationX: diffX * 2, y: diffY * 2).scaledBy(x: 2, y: 2).rotated(by: .pi / 4)
             self.blackhallButton.transform = CGAffineTransform(translationX: diffX, y: diffY).scaledBy(x: 2, y: 2)
         }
         return animator
@@ -158,7 +160,7 @@ extension HomeViewController {
             let diffY = self.view.center.y - self.whitehallButton.frame.midY
             self.backgroundImageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             self.whitehallButton.transform = CGAffineTransform(translationX: diffX, y: diffY).scaledBy(x: 2, y: 2)
-            self.myPlanetButton.transform = CGAffineTransform(translationX: diffX * 2, y: diffY * 2).scaledBy(x: 2, y: 2)
+            self.myPlanetButton.transform = CGAffineTransform(translationX: diffX * 2, y: diffY * 2).scaledBy(x: 2, y: 2).rotated(by: .pi / 4)
             self.blackhallButton.transform = CGAffineTransform(translationX: diffX * 2, y: diffY * 2).scaledBy(x: 2, y: 2)
         }
         return animator
@@ -168,7 +170,7 @@ extension HomeViewController {
             guard let self = self else { return }
             self.backgroundImageView.transform = .identity
             self.whitehallButton.transform = .identity
-            self.myPlanetButton.transform = .identity
+            self.myPlanetButton.transform = CGAffineTransform(rotationAngle: .pi / 4)
             self.blackhallButton.transform = .identity
         }
         return animator
