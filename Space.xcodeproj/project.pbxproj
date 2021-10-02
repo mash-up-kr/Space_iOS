@@ -20,6 +20,14 @@
 		3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AC527084FA20020F616 /* DateFormatter.swift */; };
 		3E0E4ACD27084FAA0020F616 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ACC27084FAA0020F616 /* Reusable.swift */; };
 		3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD0270856630020F616 /* SplashViewController.swift */; };
+		3E0E4AD82708726D0020F616 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD72708726D0020F616 /* UIView.swift */; };
+		3E0E4ADA270872E50020F616 /* JoinFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD9270872E50020F616 /* JoinFirstViewController.swift */; };
+		3E0E4ADC270872F70020F616 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E4ADB270872F70020F616 /* Login.storyboard */; };
+		3E0E4ADE270876190020F616 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ADD270876190020F616 /* Button.swift */; };
+		3E0E4AE0270882A20020F616 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ADF270882A20020F616 /* TextField.swift */; };
+		3E0E4AE32708CD570020F616 /* JoinSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE22708CD570020F616 /* JoinSecondViewController.swift */; };
+		3E0E4AE52708DA970020F616 /* JoinThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE42708DA970020F616 /* JoinThirdViewController.swift */; };
+		3E0E4AE72708DB010020F616 /* JoinFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE62708DB010020F616 /* JoinFourthViewController.swift */; };
 		FFE19B3427086FBE000C2B9A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */; };
 		FFE19B3627086FCC000C2B9A /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */; };
 		FFE19B3927087013000C2B9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3827087013000C2B9A /* HomeViewController.swift */; };
@@ -46,6 +54,14 @@
 		3E0E4AC527084FA20020F616 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3E0E4ACC27084FAA0020F616 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3E0E4AD0270856630020F616 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3E0E4AD72708726D0020F616 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3E0E4AD9270872E50020F616 /* JoinFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFirstViewController.swift; sourceTree = "<group>"; };
+		3E0E4ADB270872F70020F616 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3E0E4ADD270876190020F616 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		3E0E4ADF270882A20020F616 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		3E0E4AE22708CD570020F616 /* JoinSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSecondViewController.swift; sourceTree = "<group>"; };
+		3E0E4AE42708DA970020F616 /* JoinThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinThirdViewController.swift; sourceTree = "<group>"; };
+		3E0E4AE62708DB010020F616 /* JoinFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFourthViewController.swift; sourceTree = "<group>"; };
 		FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
 		FFE19B3827087013000C2B9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -93,9 +109,11 @@
 				3E0E4AD2270856AE0020F616 /* Splash */,
 				FFE19B3727086FCF000C2B9A /* Main */,
 				FFE19B3C27087039000C2B9A /* Home */,
+				3E0E4AD6270872160020F616 /* Login */,
 				FFE19B40270870F7000C2B9A /* -----Others----- */,
 				3E0E4ABD27084F980020F616 /* Network */,
 				FFE19B4427087133000C2B9A /* -----Helper----- */,
+				3E0E4AE127089F070020F616 /* Subclass */,
 				3E0E4AC027084FA20020F616 /* Extension */,
 				3E0E4ACB27084FAA0020F616 /* Protocol */,
 			);
@@ -118,6 +136,7 @@
 				3E0E4AC327084FA20020F616 /* UICollectionView.swift */,
 				3E0E4AC427084FA20020F616 /* UITableView.swift */,
 				3E0E4AC527084FA20020F616 /* DateFormatter.swift */,
+				3E0E4AD72708726D0020F616 /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -137,6 +156,27 @@
 				3E0E4AD0270856630020F616 /* SplashViewController.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		3E0E4AD6270872160020F616 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E4ADB270872F70020F616 /* Login.storyboard */,
+				3E0E4AD9270872E50020F616 /* JoinFirstViewController.swift */,
+				3E0E4AE22708CD570020F616 /* JoinSecondViewController.swift */,
+				3E0E4AE42708DA970020F616 /* JoinThirdViewController.swift */,
+				3E0E4AE62708DB010020F616 /* JoinFourthViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3E0E4AE127089F070020F616 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E4ADD270876190020F616 /* Button.swift */,
+				3E0E4ADF270882A20020F616 /* TextField.swift */,
+			);
+			path = Subclass;
 			sourceTree = "<group>";
 		};
 		FFE19B3227086FA8000C2B9A /* SupportingFiles */ = {
@@ -238,6 +278,7 @@
 				FFE19B3B27087028000C2B9A /* HomeViewController.storyboard in Resources */,
 				3E0E4AB4270843D40020F616 /* LaunchScreen.storyboard in Resources */,
 				FFE19B41270870F7000C2B9A /* -----Others----- in Resources */,
+				3E0E4ADC270872F70020F616 /* Login.storyboard in Resources */,
 				3E0E4AB1270843D40020F616 /* Assets.xcassets in Resources */,
 				FFE19B3F270870D0000C2B9A /* -----View----- in Resources */,
 				3E0E4AAF270843D30020F616 /* Main.storyboard in Resources */,
@@ -253,7 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E0E4AE72708DB010020F616 /* JoinFourthViewController.swift in Sources */,
+				3E0E4AD82708726D0020F616 /* UIView.swift in Sources */,
+				3E0E4ADA270872E50020F616 /* JoinFirstViewController.swift in Sources */,
 				3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */,
+				3E0E4AE0270882A20020F616 /* TextField.swift in Sources */,
 				FFE19B3427086FBE000C2B9A /* MainTabBarController.swift in Sources */,
 				3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */,
 				3E0E4AA8270843D30020F616 /* AppDelegate.swift in Sources */,
@@ -261,9 +306,12 @@
 				3E0E4ACD27084FAA0020F616 /* Reusable.swift in Sources */,
 				3E0E4ABF27084F980020F616 /* NetworkManger.swift in Sources */,
 				3E0E4AC727084FA20020F616 /* Array.swift in Sources */,
+				3E0E4ADE270876190020F616 /* Button.swift in Sources */,
 				3E0E4AC927084FA20020F616 /* UITableView.swift in Sources */,
 				3E0E4AAA270843D30020F616 /* SceneDelegate.swift in Sources */,
+				3E0E4AE32708CD570020F616 /* JoinSecondViewController.swift in Sources */,
 				FFE19B3927087013000C2B9A /* HomeViewController.swift in Sources */,
+				3E0E4AE52708DA970020F616 /* JoinThirdViewController.swift in Sources */,
 				3E0E4AC627084FA20020F616 /* URLRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

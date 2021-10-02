@@ -7,33 +7,34 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
-
+final class SplashViewController: UIViewController {
+    
     @IBOutlet weak var background: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        background.setGradient(color1: UIColor(red: 0.715, green: 0.54, blue: 1, alpha: 1), color2: UIColor(red: 0.495, green: 0.413, blue: 1, alpha: 1))
+        setUpUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // TODO: splash 시간
+        pushLoginView()
+    }
+    
+    private func setUpUI() {
+        guard let firstColor = UIColor(named: "purple01"),
+              let secondColor = UIColor(named: "purple02") else {
+            return
+        }
+        background.setGradient(color1: firstColor, color2: secondColor)
+    }
+    
+    private func pushLoginView() {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "Login")
+        loginViewController.modalPresentationStyle = .fullScreen
+        loginViewController.navigationController?.setNavigationBarHidden(true, animated: false)
+        present(loginViewController, animated: false, completion: nil)
     }
 }
-
-extension UIView{
-    func setGradient(color1:UIColor,color2:UIColor){
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.colors = [color1.cgColor,color2.cgColor]
-        gradient.locations = [0 , 1]
-        gradient.startPoint = CGPoint(x: 0.25, y: 0.5)
-        gradient.endPoint = CGPoint(x: 0.75, y: 0.5)
-        gradient.frame = bounds
-        layer.addSublayer(gradient)
-        
-        gradient.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0.93, b: 0.97, c: -0.97, d: 0.29, tx: 0.48, ty: -0.15))
-
-        gradient.bounds = self.bounds.insetBy(dx: -0.5*self.bounds.size.width, dy: -0.5*self.bounds.size.height)
-
-        gradient.position = self.center
-
-        self.layer.addSublayer(gradient)
-    }
-}
-

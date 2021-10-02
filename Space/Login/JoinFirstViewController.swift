@@ -7,7 +7,7 @@
 
 import UIKit
 
-// TODO: 이메일 데이터 넘기기
+// TODO: 이메일 데이터 넘기기, textField 키보드 영어만뜨게?, 페이지 넘어갈때 이메일에 인증번호 넘겨야겠지
 final class JoinFirstViewController: UIViewController {
     
     @IBOutlet weak var nextButton: Button!
@@ -25,14 +25,16 @@ final class JoinFirstViewController: UIViewController {
     }
     
     private func setUpNavigationBar() {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+
+        // FIXME: backButtonTitle 매번 하는거 바꿀수없나
         navigationItem.backButtonTitle = ""
         navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     @IBAction func cancelButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {

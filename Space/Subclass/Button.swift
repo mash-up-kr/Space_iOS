@@ -7,6 +7,7 @@
 
 import UIKit
 
+// TODO: 버튼 자체에서 글씨체랑 크기랑 굵기 해주기
 class Button: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
