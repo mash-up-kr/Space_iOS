@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,9 +15,60 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXp-f5-puA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-Kl-xwc">
+                                        <rect key="frame" x="0.0" y="0.0" width="1151" height="896"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="i0Y-Kl-xwc" firstAttribute="trailing" secondItem="mqq-Jx-ys3" secondAttribute="trailing" id="NuI-WT-PNf"/>
+                                    <constraint firstItem="i0Y-Kl-xwc" firstAttribute="bottom" secondItem="mqq-Jx-ys3" secondAttribute="bottom" id="cf1-xX-yH4"/>
+                                    <constraint firstItem="mqq-Jx-ys3" firstAttribute="leading" secondItem="i0Y-Kl-xwc" secondAttribute="leading" id="gcg-Ne-0mu"/>
+                                    <constraint firstItem="mqq-Jx-ys3" firstAttribute="top" secondItem="i0Y-Kl-xwc" secondAttribute="top" id="kjB-SO-RdO"/>
+                                    <constraint firstItem="i0Y-Kl-xwc" firstAttribute="height" secondItem="Obl-je-lW6" secondAttribute="height" id="vMq-AF-2fS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mqq-Jx-ys3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Obl-je-lW6"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOu-Zl-gOD">
+                                <rect key="frame" x="239" y="61" width="161" height="147"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="whitehall" title=" "/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwH-p9-kBB">
+                                <rect key="frame" x="102" y="363" width="210.5" height="180"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="splash_image" title=" "/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHd-2H-efa">
+                                <rect key="frame" x="23" y="649" width="164" height="150"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="blackhall" title=" "/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lXp-f5-puA" secondAttribute="bottom" id="Bp2-F7-m4M"/>
+                            <constraint firstItem="lXp-f5-puA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="CeW-d5-9Ek"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pHd-2H-efa" secondAttribute="bottom" constant="63" id="IF6-Xs-y5D"/>
+                            <constraint firstItem="pHd-2H-efa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="23" id="LCU-iw-j2w"/>
+                            <constraint firstItem="CwH-p9-kBB" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Liv-sF-eeo"/>
+                            <constraint firstItem="CwH-p9-kBB" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="Sum-RM-244"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lXp-f5-puA" secondAttribute="trailing" id="jAJ-FR-hkF"/>
+                            <constraint firstItem="fOu-Zl-gOD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="17" id="jya-ua-7F4"/>
+                            <constraint firstItem="lXp-f5-puA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pTt-tG-eRe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fOu-Zl-gOD" secondAttribute="trailing" constant="14" id="u1w-v0-8v3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blackhallButton" destination="pHd-2H-efa" id="89X-4U-WAj"/>
+                        <outlet property="myPlanetButton" destination="CwH-p9-kBB" id="nBw-xR-4MN"/>
+                        <outlet property="whitehallButton" destination="fOu-Zl-gOD" id="PMP-lt-QWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,8 +76,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="blackhall" width="136" height="136"/>
+        <image name="home_background" width="1151" height="770"/>
+        <image name="splash_image" width="183" height="166"/>
+        <image name="whitehall" width="133" height="133"/>
     </resources>
 </document>
