@@ -7,17 +7,19 @@
 
 import UIKit
 
-// FIXME: isTextFieldValid 사용할때 매직넘버 사용, 1글자 누르고 다음칸으로 넘어가게
+// TODO: isTextFieldValid 사용할때 매직넘버 사용, 1글자 누르고 다음칸으로 넘어가게
 class JoinThirdViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: TextField! {
         didSet {
             passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            passwordTextField.isSecureTextEntry = true
         }
     }
     @IBOutlet weak var checkPasswordTextField: TextField! {
         didSet {
             checkPasswordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            checkPasswordTextField.isSecureTextEntry = true
         }
     }
     @IBOutlet weak var passwordCheckImage: UIImageView!

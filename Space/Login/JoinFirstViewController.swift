@@ -28,7 +28,7 @@ final class JoinFirstViewController: UIViewController {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
 
-        // FIXME: backButtonTitle 매번 하는거 바꿀수없나
+        // TODO: backButtonTitle 매번 하는거 바꿀수없나
         navigationItem.backButtonTitle = ""
         navigationController?.setNavigationBarHidden(false, animated: false)
     }

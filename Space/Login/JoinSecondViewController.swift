@@ -16,6 +16,7 @@ class JoinSecondViewController: UIViewController {
             }
         }
     }
+    // TODO: timber 시간 흐르게
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var nextButton: Button!
     
@@ -27,7 +28,7 @@ class JoinSecondViewController: UIViewController {
     private lazy var isTextFieldValid = Array(repeating: false, count: numberTextFieldArray.count)
     
     @IBAction func touchUpResendButton(_ sender: Any) {
-        // TODO: 인증번호 재전송하기, 재전송 버튼 밑줄
+        // TODO: 인증번호 재전송하기, 재전송 버튼 밑줄, 여기도 시간 흐르게해야함
         debugPrint("재전송")
     }
     
