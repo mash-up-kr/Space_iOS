@@ -27,6 +27,10 @@ class TextField: UITextField {
         self.layer.cornerRadius = 10
         self.tintColor = .white
         changeStatus(status: .unSelected)
+
+        if let placeholderText = self.placeholder {
+            self.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "gray02")])
+        }
     }
     
     func changeStatus(status: Status) {
@@ -41,4 +45,12 @@ class TextField: UITextField {
             self.layer.borderColor = UIColor(named: "red01")?.cgColor
         }
     }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 10, dy: 0)
+        }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return textRect(forBounds: bounds)
+        }
 }

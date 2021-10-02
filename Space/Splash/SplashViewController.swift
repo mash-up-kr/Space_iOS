@@ -9,7 +9,7 @@ import UIKit
 
 final class SplashViewController: UIViewController {
     
-    @IBOutlet weak var background: UIView!
+    @IBOutlet private weak var background: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,7 @@ final class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // TODO: splash 시간
+        sleep(1)
         pushLoginView()
     }
     

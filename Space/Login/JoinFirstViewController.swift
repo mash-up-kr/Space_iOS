@@ -7,13 +7,13 @@
 
 import UIKit
 
-// TODO: 이메일 데이터 넘기기, textField 키보드 영어만뜨게?, 페이지 넘어갈때 이메일에 인증번호 넘겨야겠지
+// TODO: 이메일 데이터 넘기기, textField 키보드 영어만뜨게?, 페이지 넘어갈때 이메일에 인증번호 넘겨달라고 해야겠찌
 final class JoinFirstViewController: UIViewController {
     
-    @IBOutlet weak var nextButton: Button!
-    @IBOutlet weak var checkImageView: UIImageView!
-    @IBOutlet weak var explainLabel: UILabel!
-    @IBOutlet weak var emailTextField: TextField! {
+    @IBOutlet private weak var nextButton: Button!
+    @IBOutlet private weak var checkImageView: UIImageView!
+    @IBOutlet private weak var explainLabel: UILabel!
+    @IBOutlet private weak var emailTextField: TextField! {
         didSet {
             emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         }
@@ -33,17 +33,13 @@ final class JoinFirstViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    @IBAction func cancelButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
-    @objc func textFieldDidChange(_ textField: UITextField) {
+    @objc private func textFieldDidChange(_ textField: UITextField) {
         if isValidEmail(text: textField.text) {
             nextButton.setEnabled(isEnabled: true)
             emailTextField.changeStatus(status: .vaild)
             checkImageView.image = UIImage(named: "checkCircle")
             explainLabel.text = "입력한 이메일로 인증번호가 전송됩니다."
-            explainLabel.textColor = UIColor(named: "gray01")
+            explainLabel.textColor = UIColor(named: "gray02")
         } else {
             nextButton.setEnabled(isEnabled: false)
             emailTextField.changeStatus(status: .unvalid)
@@ -57,5 +53,9 @@ final class JoinFirstViewController: UIViewController {
         let emailRegularExpression = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegularExpression)
         return emailTest.evaluate(with: text)
+    }
+    
+    @IBAction private func cancelButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

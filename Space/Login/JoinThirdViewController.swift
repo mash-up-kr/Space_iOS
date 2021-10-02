@@ -7,24 +7,24 @@
 
 import UIKit
 
-// TODO: isTextFieldValid 사용할때 매직넘버 사용, 1글자 누르고 다음칸으로 넘어가게
-class JoinThirdViewController: UIViewController {
+// TODO: isTextFieldValid 사용할때 매직넘버 사용
+final class JoinThirdViewController: UIViewController {
 
-    @IBOutlet weak var passwordTextField: TextField! {
+    @IBOutlet private weak var passwordTextField: TextField! {
         didSet {
             passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
             passwordTextField.isSecureTextEntry = true
         }
     }
-    @IBOutlet weak var checkPasswordTextField: TextField! {
+    @IBOutlet private weak var checkPasswordTextField: TextField! {
         didSet {
             checkPasswordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
             checkPasswordTextField.isSecureTextEntry = true
         }
     }
-    @IBOutlet weak var passwordCheckImage: UIImageView!
-    @IBOutlet weak var checkPasswordCheckImage: UIImageView!
-    @IBOutlet weak var nextButton: Button!
+    @IBOutlet private weak var passwordCheckImage: UIImageView!
+    @IBOutlet private weak var checkPasswordCheckImage: UIImageView!
+    @IBOutlet private weak var nextButton: Button!
     
     private lazy var isTextFieldValid = Array(repeating: false, count: 2)
 
@@ -33,11 +33,7 @@ class JoinThirdViewController: UIViewController {
         navigationItem.backButtonTitle = ""
     }
 
-    @IBAction func cancelButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
-    @objc func textFieldDidChange(_ textField: TextField) {
+    @objc private func textFieldDidChange(_ textField: TextField) {
         if textField == passwordTextField {
             setPasswordTextFieldStatus(isVaild: isValidPassword(text: textField.text))
             if checkPasswordTextField.text?.isEmpty == false {
@@ -88,5 +84,9 @@ class JoinThirdViewController: UIViewController {
     
     private func isSamePassword() -> Bool {
         return passwordTextField.text == checkPasswordTextField.text
+    }
+    
+    @IBAction private func cancelButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

@@ -7,26 +7,22 @@
 
 import UIKit
 
-class JoinFourthViewController: UIViewController {
+final class JoinFourthViewController: UIViewController {
 
-    @IBOutlet weak var nicknameTextField: TextField! {
+    @IBOutlet private weak var nicknameTextField: TextField! {
         didSet {
             nicknameTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         }
     }
-    @IBOutlet weak var nicknameCountLabel: UILabel!
-    @IBOutlet weak var nextButton: Button!
+    @IBOutlet private weak var nicknameCountLabel: UILabel!
+    @IBOutlet private weak var nextButton: Button!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonTitle = ""
     }
     
-    @IBAction func cancelButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
-    @objc func textFieldDidChange(_ textField: TextField) {
+    @objc private func textFieldDidChange(_ textField: TextField) {
         guard let textCount = nicknameTextField.text?.count else {
             nextButton.setEnabled(isEnabled: false)
             return
@@ -39,5 +35,9 @@ class JoinFourthViewController: UIViewController {
             nextButton.setEnabled(isEnabled: false)
             nicknameTextField.changeStatus(status: .unvalid)
         }
+    }
+    
+    @IBAction private func cancelButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

@@ -7,36 +7,64 @@
 
 import UIKit
 
-class JoinSecondViewController: UIViewController {
-
-    @IBOutlet var numberTextFieldArray: [TextField]! {
+final class JoinSecondViewController: UIViewController {
+    
+    @IBOutlet private var numberTextFieldArray: [TextField]! {
         didSet {
             for textField in numberTextFieldArray {
                 textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
             }
         }
     }
-    // TODO: timber 시간 흐르게
-    @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var nextButton: Button!
+    @IBOutlet private weak var timerLabel: UILabel!
+    @IBOutlet private weak var nextButton: Button!
+    @IBOutlet private weak var resendButton: UIButton!
     
+    private lazy var isTextFieldValid = Array(repeating: false, count: numberTextFieldArray.count)
+
+    private var timer: Timer?
+    private var timeCount = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonTitle = ""
+        setUpResendButton()
+        startTimer()
     }
     
-    private lazy var isTextFieldValid = Array(repeating: false, count: numberTextFieldArray.count)
-    
-    @IBAction func touchUpResendButton(_ sender: Any) {
-        // TODO: 인증번호 재전송하기, 재전송 버튼 밑줄, 여기도 시간 흐르게해야함
-        debugPrint("재전송")
+    private func setUpResendButton() {
+        guard let text = resendButton.titleLabel?.text else {
+            return
+        }
+        let textRange = NSRange(location: 0, length: text.count)
+        let attributedText = NSMutableAttributedString(string: text)
+        attributedText.addAttribute(.underlineStyle,
+                                    value: NSUnderlineStyle.single.rawValue,
+                                    range: textRange)
+        resendButton.setAttributedTitle(attributedText, for: .normal)
     }
     
-    @IBAction func cancelButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+    private func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            self.timeCount += 1
+            DispatchQueue.main.async {
+                self.timerLabel.text = self.makeTimeLabel(count: self.timeCount)
+            }
+        }
     }
     
-    @objc func textFieldDidChange(_ textField: TextField) {
+    private func makeTimeLabel(count: Int) -> String {
+        let totalTime = 10 * 60 - count
+        let minute = totalTime / 60
+        let second = totalTime % 60
+        
+        return "0\(minute):\(second)"
+    }
+    
+    @objc private func textFieldDidChange(_ textField: TextField) {
         if isVaildNumber(text: textField.text) {
             textField.changeStatus(status: .vaild)
             isTextFieldValid[textField.tag] = true
@@ -53,9 +81,18 @@ class JoinSecondViewController: UIViewController {
     // TODO: textField에 한글자만 들어가고, 다음 포커스로 넘기기
     private func isVaildNumber(text: String?) -> Bool {
         guard let text = text, text.count == 1,
-           let intText = Int(text), intText >= 0, intText <= 9 else {
+              let intText = Int(text), intText >= 0, intText <= 9 else {
             return false
         }
         return true
+    }
+    
+    @IBAction private func touchUpResendButton(_ sender: Any) {
+        // TODO: 인증번호 재전송하기
+        timeCount = 0
+    }
+    
+    @IBAction private func cancelButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
 }
