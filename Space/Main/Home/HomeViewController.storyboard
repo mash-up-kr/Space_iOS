@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXp-f5-puA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXp-f5-puA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-Kl-xwc">
@@ -65,8 +65,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="i0Y-Kl-xwc" id="hBE-Wx-7Os"/>
                         <outlet property="blackhallButton" destination="pHd-2H-efa" id="89X-4U-WAj"/>
                         <outlet property="myPlanetButton" destination="CwH-p9-kBB" id="nBw-xR-4MN"/>
+                        <outlet property="scrollView" destination="lXp-f5-puA" id="gEm-sb-nek"/>
                         <outlet property="whitehallButton" destination="fOu-Zl-gOD" id="PMP-lt-QWB"/>
                     </connections>
                 </viewController>
