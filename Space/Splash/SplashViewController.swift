@@ -15,6 +15,11 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         background.setGradient(color1: UIColor(red: 0.715, green: 0.54, blue: 1, alpha: 1), color2: UIColor(red: 0.495, green: 0.413, blue: 1, alpha: 1))
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.view.window?.rootViewController = MainTabBarController.storyboardInstance()
+    }
 }
 
 extension UIView{
