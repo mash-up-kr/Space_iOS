@@ -20,6 +20,7 @@
 		3E0E4AC927084FA20020F616 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AC427084FA20020F616 /* UITableView.swift */; };
 		3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AC527084FA20020F616 /* DateFormatter.swift */; };
 		3E0E4ACD27084FAA0020F616 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ACC27084FAA0020F616 /* Reusable.swift */; };
+		3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD0270856630020F616 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3E0E4AC427084FA20020F616 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		3E0E4AC527084FA20020F616 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3E0E4ACC27084FAA0020F616 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3E0E4AD0270856630020F616 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		3E0E4AA6270843D30020F616 /* Space */ = {
 			isa = PBXGroup;
 			children = (
+				3E0E4AD2270856AE0020F616 /* Splash */,
 				3E0E4ABD27084F980020F616 /* Network */,
 				3E0E4AC027084FA20020F616 /* Extension */,
 				3E0E4ACB27084FAA0020F616 /* Protocol */,
@@ -78,7 +81,6 @@
 				3E0E4AAB270843D30020F616 /* ViewController.swift */,
 				3E0E4AAD270843D30020F616 /* Main.storyboard */,
 				3E0E4AB0270843D40020F616 /* Assets.xcassets */,
-				3E0E4AB2270843D40020F616 /* LaunchScreen.storyboard */,
 				3E0E4AB5270843D40020F616 /* Info.plist */,
 			);
 			path = Space;
@@ -110,6 +112,15 @@
 				3E0E4ACC27084FAA0020F616 /* Reusable.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3E0E4AD2270856AE0020F616 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3E0E4AB2270843D40020F616 /* LaunchScreen.storyboard */,
+				3E0E4AD0270856630020F616 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 			files = (
 				3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */,
 				3E0E4AAC270843D30020F616 /* ViewController.swift in Sources */,
+				3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */,
 				3E0E4AA8270843D30020F616 /* AppDelegate.swift in Sources */,
 				3E0E4AC827084FA20020F616 /* UICollectionView.swift in Sources */,
 				3E0E4ACD27084FAA0020F616 /* Reusable.swift in Sources */,
