@@ -76,9 +76,16 @@ final class JoinSecondViewController: UIViewController {
             isTextFieldValid[textField.tag] = false
             nextButton.setEnabled(isEnabled: false)
         }
+        
+        if let textCount = textField.text?.count {
+            if textCount >= 2 {
+                textField.deleteBackward()
+            } else if textCount == 1 {
+                numberTextFieldArray[safe: textField.tag + 1]?.becomeFirstResponder()
+            }
+        }
     }
     
-    // TODO: textField에 한글자만 들어가고, 다음 포커스로 넘기기
     private func isVaildNumber(text: String?) -> Bool {
         guard let text = text, text.count == 1,
               let intText = Int(text), intText >= 0, intText <= 9 else {
