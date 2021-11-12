@@ -21,13 +21,15 @@
 		3E0E4ACD27084FAA0020F616 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ACC27084FAA0020F616 /* Reusable.swift */; };
 		3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD0270856630020F616 /* SplashViewController.swift */; };
 		3E0E4AD82708726D0020F616 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD72708726D0020F616 /* UIView.swift */; };
-		3E0E4ADA270872E50020F616 /* JoinFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD9270872E50020F616 /* JoinFirstViewController.swift */; };
+		3E0E4ADA270872E50020F616 /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AD9270872E50020F616 /* EnterEmailViewController.swift */; };
 		3E0E4ADC270872F70020F616 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E4ADB270872F70020F616 /* Login.storyboard */; };
 		3E0E4ADE270876190020F616 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ADD270876190020F616 /* Button.swift */; };
 		3E0E4AE0270882A20020F616 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4ADF270882A20020F616 /* TextField.swift */; };
-		3E0E4AE32708CD570020F616 /* JoinSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE22708CD570020F616 /* JoinSecondViewController.swift */; };
-		3E0E4AE52708DA970020F616 /* JoinThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE42708DA970020F616 /* JoinThirdViewController.swift */; };
-		3E0E4AE72708DB010020F616 /* JoinFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE62708DB010020F616 /* JoinFourthViewController.swift */; };
+		3E0E4AE32708CD570020F616 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE22708CD570020F616 /* AuthenticationViewController.swift */; };
+		3E0E4AE52708DA970020F616 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE42708DA970020F616 /* SetPasswordViewController.swift */; };
+		3E0E4AE72708DB010020F616 /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E4AE62708DB010020F616 /* MakeNicknameViewController.swift */; };
+		3E4AFBC6273EBBFD008438EA /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4AFBC5273EBBFD008438EA /* EmailLoginViewController.swift */; };
+		3E4AFBCC273ECDB1008438EA /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4AFBCB273ECDB1008438EA /* LoginSelectViewController.swift */; };
 		FFE19B3427086FBE000C2B9A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */; };
 		FFE19B3627086FCC000C2B9A /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */; };
 		FFE19B3927087013000C2B9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3827087013000C2B9A /* HomeViewController.swift */; };
@@ -66,13 +68,15 @@
 		3E0E4ACC27084FAA0020F616 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3E0E4AD0270856630020F616 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3E0E4AD72708726D0020F616 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		3E0E4AD9270872E50020F616 /* JoinFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFirstViewController.swift; sourceTree = "<group>"; };
+		3E0E4AD9270872E50020F616 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		3E0E4ADB270872F70020F616 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3E0E4ADD270876190020F616 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3E0E4ADF270882A20020F616 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		3E0E4AE22708CD570020F616 /* JoinSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSecondViewController.swift; sourceTree = "<group>"; };
-		3E0E4AE42708DA970020F616 /* JoinThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinThirdViewController.swift; sourceTree = "<group>"; };
-		3E0E4AE62708DB010020F616 /* JoinFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFourthViewController.swift; sourceTree = "<group>"; };
+		3E0E4AE22708CD570020F616 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		3E0E4AE42708DA970020F616 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
+		3E0E4AE62708DB010020F616 /* MakeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewController.swift; sourceTree = "<group>"; };
+		3E4AFBC5273EBBFD008438EA /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		3E4AFBCB273ECDB1008438EA /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
 		FFE19B3827087013000C2B9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -185,10 +189,12 @@
 			isa = PBXGroup;
 			children = (
 				3E0E4ADB270872F70020F616 /* Login.storyboard */,
-				3E0E4AD9270872E50020F616 /* JoinFirstViewController.swift */,
-				3E0E4AE22708CD570020F616 /* JoinSecondViewController.swift */,
-				3E0E4AE42708DA970020F616 /* JoinThirdViewController.swift */,
-				3E0E4AE62708DB010020F616 /* JoinFourthViewController.swift */,
+				3E4AFBCB273ECDB1008438EA /* LoginSelectViewController.swift */,
+				3E4AFBC5273EBBFD008438EA /* EmailLoginViewController.swift */,
+				3E0E4AD9270872E50020F616 /* EnterEmailViewController.swift */,
+				3E0E4AE22708CD570020F616 /* AuthenticationViewController.swift */,
+				3E0E4AE42708DA970020F616 /* SetPasswordViewController.swift */,
+				3E0E4AE62708DB010020F616 /* MakeNicknameViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -344,15 +350,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E0E4AE72708DB010020F616 /* JoinFourthViewController.swift in Sources */,
+				3E0E4AE72708DB010020F616 /* MakeNicknameViewController.swift in Sources */,
 				3E0E4AD82708726D0020F616 /* UIView.swift in Sources */,
-				3E0E4ADA270872E50020F616 /* JoinFirstViewController.swift in Sources */,
+				3E0E4ADA270872E50020F616 /* EnterEmailViewController.swift in Sources */,
 				3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */,
 				3E0E4AE0270882A20020F616 /* TextField.swift in Sources */,
 				FFE19B5227088BE5000C2B9A /* HomeAppCell.swift in Sources */,
 				FFE19B3427086FBE000C2B9A /* MainTabBarController.swift in Sources */,
 				FFE19B572708CDC9000C2B9A /* HomeViewModel.swift in Sources */,
 				FFE19B5B2708F740000C2B9A /* HomeAppAddCell.swift in Sources */,
+				3E4AFBCC273ECDB1008438EA /* LoginSelectViewController.swift in Sources */,
 				3E0E4AD1270856630020F616 /* SplashViewController.swift in Sources */,
 				FFE19B592708E866000C2B9A /* BottomSheetDragIndicator.swift in Sources */,
 				3E0E4AA8270843D30020F616 /* AppDelegate.swift in Sources */,
@@ -365,9 +372,10 @@
 				3E0E4AC927084FA20020F616 /* UITableView.swift in Sources */,
 				FFE19B472708726B000C2B9A /* Storyboardable.swift in Sources */,
 				3E0E4AAA270843D30020F616 /* SceneDelegate.swift in Sources */,
-				3E0E4AE32708CD570020F616 /* JoinSecondViewController.swift in Sources */,
+				3E0E4AE32708CD570020F616 /* AuthenticationViewController.swift in Sources */,
 				FFE19B3927087013000C2B9A /* HomeViewController.swift in Sources */,
-				3E0E4AE52708DA970020F616 /* JoinThirdViewController.swift in Sources */,
+				3E4AFBC6273EBBFD008438EA /* EmailLoginViewController.swift in Sources */,
+				3E0E4AE52708DA970020F616 /* SetPasswordViewController.swift in Sources */,
 				3E0E4AC627084FA20020F616 /* URLRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

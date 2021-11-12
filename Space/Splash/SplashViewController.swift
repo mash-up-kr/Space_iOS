@@ -14,11 +14,11 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        setUpNavigationBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // TODO: splash 시간
         sleep(1)
         pushLoginView()
     }
@@ -31,11 +31,15 @@ final class SplashViewController: UIViewController {
         background.setGradient(color1: firstColor, color2: secondColor)
     }
     
+    private func setUpNavigationBar() {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+    }
+    
     private func pushLoginView() {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let loginViewController = storyboard.instantiateViewController(withIdentifier: "Login")
         loginViewController.modalPresentationStyle = .fullScreen
-        loginViewController.navigationController?.setNavigationBarHidden(true, animated: false)
         present(loginViewController, animated: false, completion: nil)
     }
 }

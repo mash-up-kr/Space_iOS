@@ -18,11 +18,11 @@ extension UIView {
         layer.addSublayer(gradient)
         
         gradient.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0.93, b: 0.97, c: -0.97, d: 0.29, tx: 0.48, ty: -0.15))
-
+        
         gradient.bounds = self.bounds.insetBy(dx: -0.5*self.bounds.size.width, dy: -0.5*self.bounds.size.height)
-
+        
         gradient.position = self.center
-
+        
         self.layer.addSublayer(gradient)
     }
 }

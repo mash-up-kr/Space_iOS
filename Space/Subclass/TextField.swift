@@ -13,6 +13,9 @@ class TextField: UITextField {
         case vaild
         case unvalid
     }
+    
+    var status: Status = .unSelected
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpUI()
@@ -25,15 +28,20 @@ class TextField: UITextField {
     
     private func setUpUI() {
         self.layer.cornerRadius = 10
-        self.tintColor = .white
+        self.textColor = .white
+        self.backgroundColor = UIColor(named: "gray01")
         changeStatus(status: .unSelected)
-
-        if let placeholderText = self.placeholder {
-            self.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "gray02")])
+        
+        if let placeholderText = self.placeholder,
+           let gray02 = UIColor(named: "gray02") {
+            self.attributedPlaceholder = NSAttributedString(
+                string: placeholderText,
+                attributes: [NSAttributedString.Key.foregroundColor : gray02])
         }
     }
     
     func changeStatus(status: Status) {
+        self.status = status
         switch status {
         case .unSelected:
             self.layer.borderWidth = 0
@@ -48,9 +56,9 @@ class TextField: UITextField {
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 10, dy: 0)
-        }
+    }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return textRect(forBounds: bounds)
-        }
+    }
 }

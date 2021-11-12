@@ -22,7 +22,7 @@ class Button: UIButton {
     private func setUpUI() {
         self.layer.cornerRadius = 10
         self.tintColor = .white
-
+        
         setEnabled(isEnabled: self.isEnabled)
     }
     

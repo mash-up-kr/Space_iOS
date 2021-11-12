@@ -1,5 +1,5 @@
 //
-//  JoinThirdViewController.swift
+//  SetPasswordViewController.swift
 //  Space
 //
 //  Created by lina on 2021/10/03.
@@ -8,12 +8,20 @@
 import UIKit
 
 // TODO: isTextFieldValid 사용할때 매직넘버 사용
-final class JoinThirdViewController: UIViewController {
-
+final class SetPasswordViewController: UIViewController {
+    
+    @IBOutlet private weak var viewTitleLabel: UILabel! {
+        didSet {
+            if isResetProcess {
+                viewTitleLabel.text = "비밀번호 재설정"
+            }
+        }
+    }
     @IBOutlet private weak var passwordTextField: TextField! {
         didSet {
             passwordTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
             passwordTextField.isSecureTextEntry = true
+            passwordTextField.becomeFirstResponder()
         }
     }
     @IBOutlet private weak var checkPasswordTextField: TextField! {
@@ -26,13 +34,15 @@ final class JoinThirdViewController: UIViewController {
     @IBOutlet private weak var checkPasswordCheckImage: UIImageView!
     @IBOutlet private weak var nextButton: Button!
     
+    var isResetProcess: Bool = false
+    
     private lazy var isTextFieldValid = Array(repeating: false, count: 2)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backButtonTitle = ""
     }
-
+    
     @objc private func textFieldDidChange(_ textField: TextField) {
         if textField == passwordTextField {
             setPasswordTextFieldStatus(isVaild: isValidPassword(text: textField.text))
@@ -86,7 +96,22 @@ final class JoinThirdViewController: UIViewController {
         return passwordTextField.text == checkPasswordTextField.text
     }
     
-    @IBAction private func cancelButton(_ sender: Any) {
+    @IBAction private func didTapNextButton() {
+        if isResetProcess {
+            guard let emailLoginViewController = self.storyboard?.instantiateViewController(identifier: "emailLogin") else {
+                return
+            }
+            navigationController?.popToRootViewController(animated: true)
+            navigationController?.pushViewController(emailLoginViewController, animated: true)
+        } else {
+            guard let makeNicknameView = self.storyboard?.instantiateViewController(identifier: "makeNickname") else {
+                return
+            }
+            navigationController?.pushViewController(makeNicknameView, animated: true)
+        }
+    }
+    
+    @IBAction private func didTapCancelButton(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
 }
