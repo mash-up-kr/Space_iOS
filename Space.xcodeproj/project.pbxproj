@@ -33,6 +33,7 @@
 		3E4AFBCF273ED172008438EA /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AFBCE273ED172008438EA /* Review.storyboard */; };
 		3E4AFBD1273ED505008438EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4AFBD0273ED505008438EA /* SearchViewController.swift */; };
 		3E4AFBD4273ED572008438EA /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4AFBD3273ED572008438EA /* SearchTableViewCell.swift */; };
+		3E4AFBD6273F9BC3008438EA /* HallSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4AFBD5273F9BC3008438EA /* HallSelectViewController.swift */; };
 		FFE19B3427086FBE000C2B9A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */; };
 		FFE19B3627086FCC000C2B9A /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */; };
 		FFE19B3927087013000C2B9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE19B3827087013000C2B9A /* HomeViewController.swift */; };
@@ -83,6 +84,7 @@
 		3E4AFBCE273ED172008438EA /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 		3E4AFBD0273ED505008438EA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3E4AFBD3273ED572008438EA /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		3E4AFBD5273F9BC3008438EA /* HallSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallSelectViewController.swift; sourceTree = "<group>"; };
 		FFE19B3327086FBE000C2B9A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FFE19B3527086FCC000C2B9A /* MainTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
 		FFE19B3827087013000C2B9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				3E4AFBD2273ED562008438EA /* Cell */,
 				3E4AFBCE273ED172008438EA /* Review.storyboard */,
 				3E4AFBD0273ED505008438EA /* SearchViewController.swift */,
+				3E4AFBD5273F9BC3008438EA /* HallSelectViewController.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0E4AE72708DB010020F616 /* MakeNicknameViewController.swift in Sources */,
+				3E4AFBD6273F9BC3008438EA /* HallSelectViewController.swift in Sources */,
 				3E0E4AD82708726D0020F616 /* UIView.swift in Sources */,
 				3E0E4ADA270872E50020F616 /* EnterEmailViewController.swift in Sources */,
 				3E0E4ACA27084FA20020F616 /* DateFormatter.swift in Sources */,

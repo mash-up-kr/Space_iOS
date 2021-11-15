@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SearchTableViewCell: UITableViewCell {
+final class SearchTableViewCell: UITableViewCell, Reusable {
 
     @IBOutlet weak var appImageView: UIImageView! {
         didSet {
